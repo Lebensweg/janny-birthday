@@ -215,11 +215,6 @@ nav ul li a:hover {
     margin: 0 auto; /* Centers the image horizontally */
 }
 
-.carousel-item img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* Navigation Styles */
 nav ul {
     list-style: none;
