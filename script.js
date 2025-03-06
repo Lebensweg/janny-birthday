@@ -25,7 +25,7 @@ showItem(currentIndex);
 
 // Music Play Button
 const musicButton = document.getElementById('music-button');
-const birthdayMusic = document.getElementById('birthday-music');
+const birthdayMusic = document.getElementById('birthdaymusic');
 
 musicButton.addEventListener('click', () => {
     if (birthdayMusic.paused) {
