@@ -208,6 +208,13 @@ nav ul li a:hover {
     right: 10px;
 }
 
+.carousel-item img[src="3.jpg"] {
+    height: 500px;
+    width: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
 /* Navigation Styles */
 nav ul {
     list-style: none;
