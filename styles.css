@@ -17,7 +17,7 @@ body, html {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: blur(8px); /* Optional: Add blur effect */
+    filter: blur(2px); /* Optional: Add blur effect */
 }
 
 /* Container Styles */
@@ -178,13 +178,14 @@ nav ul li a:hover {
 }
 
 /* Page 4: Curtains Close Styles */
+/* Poem Styles */
 .poem {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
     margin: 20px auto;
-    text-align: left;
+    text-align: center;
     color: #333;
     max-height: 400px; /* Set a maximum height */
     overflow-y: auto; /* Enable vertical scrolling */
@@ -192,6 +193,20 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
+.poem h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.poem p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Profile Styles */
 .profile {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -216,6 +231,7 @@ nav ul li a:hover {
     font-size: 1.1rem;
 }
 
+/* Camera Button Styles */
 #camera-button {
     margin-top: 20px;
     padding: 10px 20px;
