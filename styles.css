@@ -133,6 +133,7 @@ nav ul li a:hover {
 .carousel-item {
     display: none;
     text-align: center;
+    position: relative;
 }
 
 .carousel-item.active {
@@ -185,7 +186,6 @@ nav ul li a:hover {
 .carousel-button.next {
     right: 10px;
 }
-
 /* Navigation Styles */
 nav ul {
     list-style: none;
