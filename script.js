@@ -29,8 +29,12 @@ const birthdayMusic = document.getElementById('birthdaymusic');
 
 musicButton.addEventListener('click', () => {
     if (birthdayMusic.paused) {
-        birthdayMusic.play();
-        musicButton.textContent = '🎵 Pause Music';
+        birthdayMusic.play().then(() => {
+            musicButton.textContent = '🎵 Pause Music';
+        }).catch((error) => {
+            console.error("Error playing music:", error);
+            alert("Error playing music. Please check the console for details.");
+        });
     } else {
         birthdayMusic.pause();
         musicButton.textContent = '🎵 Play Music';
