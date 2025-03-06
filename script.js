@@ -38,4 +38,16 @@ musicButton.addEventListener('click', () => {
 });
 
 // Camera Flash Effect
-const cameraButton = document
+const cameraButton = document.getElementById('camera-button');
+const flash = document.getElementById('flash');
+
+cameraButton.addEventListener('click', () => {
+    // Show the "Say cheese!" pop-up
+    alert('Say cheese! 📸');
+
+    // Trigger the flash effect
+    flash.style.opacity = '1';
+    setTimeout(() => {
+        flash.style.opacity = '0';
+    }, 500);
+});
