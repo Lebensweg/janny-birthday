@@ -166,6 +166,12 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
+.carousel-item img[src="3.jpg"] {
+    height: 500px;
+    width: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the image */
+}
 .carousel-item .caption {
     margin-top: 10px;
     font-size: 1.2rem;
