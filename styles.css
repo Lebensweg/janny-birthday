@@ -120,14 +120,37 @@ nav ul li a:hover {
     background: #e6b800;
 }
 
-/* Carousel Caption Styles */
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 .carousel-item .caption {
     margin-top: 10px;
     font-size: 1.2rem;
     font-style: italic;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow for better visibility */
-    background: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
     padding: 10px;
     border-radius: 5px;
     position: absolute;
@@ -136,6 +159,31 @@ nav ul li a:hover {
     transform: translateX(-50%);
     width: 80%;
     text-align: center;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
 }
 
 /* Navigation Styles */
