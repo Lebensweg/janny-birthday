@@ -33,21 +33,25 @@ console.log("Previous button:", prevButton);
 console.log("Next button:", nextButton);
 
 // Music Play Button
-const musicButton = document.getElementById('music-button');
-const birthdayMusic = document.getElementById('birthdaymusic');
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Music script loaded!");
 
-musicButton.addEventListener('click', () => {
-    if (birthdayMusic.paused) {
-        birthdayMusic.play().then(() => {
-            musicButton.textContent = '🎵 Pause Music';
-        }).catch((error) => {
-            console.error("Error playing music:", error);
-            alert("Error playing music. Please check the console for details.");
-        });
-    } else {
-        birthdayMusic.pause();
-        musicButton.textContent = '🎵 Play Music';
-    }
+    const musicButton = document.getElementById('music-button');
+    const birthdayMusic = document.getElementById('birthday-music');
+
+    musicButton.addEventListener('click', () => {
+        if (birthdayMusic.paused) {
+            birthdayMusic.play().then(() => {
+                musicButton.textContent = '🎵 Pause Music';
+            }).catch((error) => {
+                console.error("Error playing music:", error);
+                alert("Error playing music. Please check the console for details.");
+            });
+        } else {
+            birthdayMusic.pause();
+            musicButton.textContent = '🎵 Play Music';
+        }
+    });
 });
 
 // Camera Flash Effect
