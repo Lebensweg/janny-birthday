@@ -26,6 +26,7 @@ nextButton.addEventListener('click', () => {
 
 // Show the first item initially
 showItem(currentIndex);
+
 // Music Play Button
 const musicButton = document.getElementById('music-button');
 const birthdayMusic = document.getElementById('birthdaymusic');
