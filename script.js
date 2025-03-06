@@ -1,31 +1,32 @@
-// Carousel Functionality
-const carouselItems = document.querySelectorAll('.carousel-item');
-const prevButton = document.querySelector('.carousel-button.prev');
-const nextButton = document.querySelector('.carousel-button.next');
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Carousel script loaded!");
 
-function showItem(index) {
-    // Hide all items
-    carouselItems.forEach((item) => {
-        item.classList.remove('active');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+    let currentIndex = 0;
+
+    function showItem(index) {
+        console.log("Showing item:", index); // Debugging
+        carouselItems.forEach((item) => {
+            item.classList.remove('active');
+        });
+        carouselItems[index].classList.add('active');
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+        showItem(currentIndex);
     });
 
-    // Show the current item
-    carouselItems[index].classList.add('active');
-}
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+        showItem(currentIndex);
+    });
 
-prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+    // Show the first item initially
     showItem(currentIndex);
 });
-
-nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
-    showItem(currentIndex);
-});
-
-// Show the first item initially
-showItem(currentIndex);
 
 // Music Play Button
 const musicButton = document.getElementById('music-button');
