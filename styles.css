@@ -134,6 +134,18 @@ nav ul li a:hover {
 .carousel-item {
     display: none;
     text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+    border: 2px solid red; /* Temporary border for debugging */
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
     position: absolute; /* Position items absolutely within the carousel */
     top: 0;
     left: 0;
