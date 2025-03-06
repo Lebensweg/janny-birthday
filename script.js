@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     showItem(currentIndex);
 });
 
+console.log("Carousel items:", carouselItems);
+console.log("Previous button:", prevButton);
+console.log("Next button:", nextButton);
+
 // Music Play Button
 const musicButton = document.getElementById('music-button');
 const birthdayMusic = document.getElementById('birthdaymusic');
