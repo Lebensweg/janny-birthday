@@ -1,18 +1,3 @@
-// Get the music button and audio element
-const musicButton = document.getElementById('music-button');
-const birthdayMusic = document.getElementById('birthday-music');
-
-// Toggle music play/pause
-musicButton.addEventListener('click', () => {
-    if (birthdayMusic.paused) {
-        birthdayMusic.play();
-        musicButton.textContent = '🎵 Pause Music';
-    } else {
-        birthdayMusic.pause();
-        musicButton.textContent = '🎵 Play Music';
-    }
-});
-
 // Carousel Functionality
 const carouselItems = document.querySelectorAll('.carousel-item');
 const prevButton = document.querySelector('.carousel-button.prev');
@@ -38,17 +23,19 @@ nextButton.addEventListener('click', () => {
 // Show the first item initially
 showItem(currentIndex);
 
-// Camera Flash Effect
-const cameraButton = document.getElementById('camera-button');
-const flash = document.getElementById('flash');
+// Music Play Button
+const musicButton = document.getElementById('music-button');
+const birthdayMusic = document.getElementById('birthday-music');
 
-cameraButton.addEventListener('click', () => {
-    // Show the "Say cheese!" pop-up
-    alert('Say cheese! 📸');
-
-    // Trigger the flash effect
-    flash.style.opacity = '1';
-    setTimeout(() => {
-        flash.style.opacity = '0';
-    }, 500);
+musicButton.addEventListener('click', () => {
+    if (birthdayMusic.paused) {
+        birthdayMusic.play();
+        musicButton.textContent = '🎵 Pause Music';
+    } else {
+        birthdayMusic.pause();
+        musicButton.textContent = '🎵 Play Music';
+    }
 });
+
+// Camera Flash Effect
+const cameraButton = document
