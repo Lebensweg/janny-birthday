@@ -5,9 +5,13 @@ const nextButton = document.querySelector('.carousel-button.next');
 let currentIndex = 0;
 
 function showItem(index) {
-    carouselItems.forEach((item, i) => {
-        item.classList.toggle('active', i === index);
+    // Hide all items
+    carouselItems.forEach((item) => {
+        item.classList.remove('active');
     });
+
+    // Show the current item
+    carouselItems[index].classList.add('active');
 }
 
 prevButton.addEventListener('click', () => {
@@ -22,7 +26,6 @@ nextButton.addEventListener('click', () => {
 
 // Show the first item initially
 showItem(currentIndex);
-
 // Music Play Button
 const musicButton = document.getElementById('music-button');
 const birthdayMusic = document.getElementById('birthdaymusic');
