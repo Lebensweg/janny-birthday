@@ -126,6 +126,18 @@ nav ul li a:hover {
 #music-button:hover {
     background: #e6b800;
 }
+/* Ensure the letter section is scrollable */
+.letter {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    color: #333;
+    max-height: 400px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
 /* Page 3: Gallery Styles */
 .carousel {
     position: relative;
